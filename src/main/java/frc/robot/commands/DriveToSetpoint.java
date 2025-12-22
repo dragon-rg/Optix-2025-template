@@ -25,12 +25,12 @@ public class DriveToSetpoint extends Command {
 
   // Called when the command is initially scheduled.
   @Override
-  public void initialize() {}
+  public void initialize() {m_subsystem.encoder.reset();}
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    m_subsystem.driveToDestination(10.0);
+    m_subsystem.driveToDestination(5.0);
   }
 
   // Called once the command ends or is interrupted.
